@@ -2,7 +2,7 @@
 
 The process of versioning a resource is complex, with numerous scenarios and use cases to consider when determining the best strategy. For instance, should contributors be allowed to modify a resource while it is awaiting approval? Is it beneficial to retain the history of resources that were submitted but ultimately rejected? After an in-depth workshop, PCA has concluded an approach to resource versioning, which is outlined as follows:
 
-> All resources that have been added to the PCA library by Draga before **XX/XX/XXXX** are considered as Submitted resources.
+> All resources that have been added to the PCA library by Draga before **09/10/2024** are considered as Submitted resources.
 
 > A resource in PCA’s library will have one of these five different statuses in any given time:
 >
