@@ -1,6 +1,8 @@
 # PCA Host Content Requirements  
 *Information requirements ensuring cost-efficient & quality publication of content*
 
+**Note:** This documentation is intended for public consumption and review. Feedback is very welcome, and we will incorporate changes iteratively.
+
 ---
 
 ## Table of contents
