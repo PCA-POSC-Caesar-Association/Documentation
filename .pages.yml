@@ -1,0 +1,29 @@
+media:
+  input: docs/images
+  output: /images
+
+content:
+  - name: documentation
+    label: Documentation
+    type: collection
+    path: docs
+    filename: "{primary}.md"
+    view:
+      fields: [title]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: false
+      - name: description
+        label: Description
+        type: string
+        required: false
+        options:
+          maxlength: 180
+      - name: body
+        label: Body
+        type: code
+        options:
+          language: markdown
