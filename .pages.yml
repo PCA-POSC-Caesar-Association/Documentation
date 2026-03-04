@@ -24,6 +24,4 @@ content:
           maxlength: 180
       - name: body
         label: Body
-        type: code
-        options:
-          language: markdown
+        type: rich-text
