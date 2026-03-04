@@ -1,0 +1,7 @@
+site_name: PCA Documentation
+docs_dir: docs
+theme:
+  name: material
+nav:
+  - Versioning: versioning.md
+  - Content Host Requirements: content_host_requirement.md
