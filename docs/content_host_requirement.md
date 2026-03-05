@@ -7,35 +7,6 @@ _Information requirements ensuring cost-efficient & quality publication of conte
 
 * * *
 
-## Table of contents
-
-*   [Introduction](#introduction)
-    
-*   [Scope, assumptions, and terminology](#scope-assumptions-and-terminology)
-    
-*   [R0. Parsing, syntax, and file-level constraints](#r0-parsing-syntax-and-file-level-constraints)
-    
-*   [R1. Ontology declaration and metadata](#r1-ontology-declaration-and-metadata)
-    
-*   [R2. Prefix declarations](#r2-prefix-declarations)
-    
-*   [R3. Public visibility](#r3-public-visibility)
-    
-*   [R4. Namespace governance and ownership](#r4-namespace-governance-and-ownership)
-    
-*   [R5. Namespace structure and IRI patterns](#r5-namespace-structure-and-iri-patterns)
-    
-*   [R6. Term-level metadata](#r6-term-level-metadata)
-    
-*   [R7. Declaring dependencies](#r7-declaring-dependencies)
-    
-*   [R8. Resource typing](#r8-resource-typing)
-    
-*   [R9. Instance data / reference datasets](#r9-instance-data-and-reference-datasets)
-    
-
-* * *
-
 ## Introduction
 
 This document describes the publication policy for PCA ontologies and content hosted through PCA’s platform. Given fulfillment of all requirements, PCA is able to give a price guarantee for publishing and hosting your ontology. For comments, questions, or feedback, contact [info@posccaesar.org](mailto:info@posccaesar.org).
