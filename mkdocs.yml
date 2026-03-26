@@ -2,6 +2,36 @@ site_name: PCA Documentation
 docs_dir: docs
 theme:
   name: material
+
 nav:
-  - Versioning: versioning.md
-  - Content Host Requirements: content_host_requirement.md
+  - index.md
+  - PCA Explore: 
+    - pca-explore/index.md
+    - Search and browse: pca-explore/search-and-browse.md
+    - Understand content pages: pca-explore/understand-content-pages.md
+  - PCA Consume: 
+    - pca-consume/index.md
+    - API authentication: pca-consume/api-authentication.md
+    - Formats and identifiers: pca-consume/formats-and-identifiers.md
+    - Accessing content the API: pca-consume/get-content-through-the-api.md
+    - Accessing content through the UI: pca-consume/get-content-through-the-ui.md
+  - PCA Evolve: 
+    - pca-evolve/index.md
+    - Choose an evolve workflow: pca-evolve/choose-an-evolve-workflow.md
+    - Create reference library: pca-evolve/create-reference-library.md
+    - CFIHOS extensions: pca-evolve/cfihos-extensions.md
+    - IMF types: pca-evolve/imf-types.md
+    - Digital symbol editor: pca-evolve/digital-symbol-editor.md
+    - Digital symbol editor Figma workflow: pca-evolve/digital-symbol-editor-figma-workflow.md
+    - Digital symbol editor submission workflow: pca-evolve/digital-symbol-editor-submission-workflow.md
+  - PCA Govern: 
+    - pca-govern/index.md
+    - Reviewer workflow: pca-govern/reviewer-workflow.md
+    - Dependency review and status updates: pca-govern/dependency-review-and-status-updates.md
+  - PCA Host: 
+    - pca-host/index.md
+    - Get started with hosting: pca-host/get-started-with-hosting.md
+    - Content host requirements: pca-host/content-host-requirements.md
+  - PCA Empower: 
+    - pca-empower/index.md
+    - How to learn the platform: pca-empower/how-to-learn-the-platform.md
