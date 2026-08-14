@@ -1,8 +1,7 @@
 ---
 title: PCA Host Content Requirements
 ---
-
-_Information requirements ensuring cost-efficient and quality publication of content_
+*Information requirements ensuring cost-efficient and quality publication of content*
 
 **Note:** This documentation is intended for public consumption and review. Feedback is very welcome, and PCA can incorporate changes iteratively.
 
@@ -112,9 +111,23 @@ Failure to meet this requirement results in published resources not being presen
 
 ## R5. Namespace structure and IRI patterns
 
-PCA supports compliant namespace patterns for ontologies and their published resources. In practice, your ontology and resource IRIs must follow the approved PCA namespace model for either ISO 23726-1-aligned ontologies or general PCA ontologies.
+PCA supports two compliant namespace patterns for ontologies and their published resources.
 
 Opaque or hash-based namespaces **shall not** be used.
+
+### R5.1 ISO 23726-1 compliant namespace
+
+- If an ontology is intended to be compliant with ISO 23726-1 (e.g. a domain ontology under ISO 23726-3 – Industrial Data Ontology), the following namespace pattern **shall** be used for the ontology: `https://posccaesar.org/ontology/<ontology_name>/ont/core`
+- The namespace for published resources in the ontology **shall** make use of the following namespace pattern: `https://posccaesar.org/ontology/<ontology_name>/rdl/<resource_name>`
+- The IRI of each published resource **shall** be unique.
+
+### R5.2 General PCA compliant namespace
+
+- If an ontology is intended to be published at PCA, but not as a domain ontology under ISO 23726-3, then the following namespace pattern **shall** be used for the ontology: `https://posccaesar.org/ontology/<ontology_path>`
+- `<ontology_path>`**may** consist of just the name of the ontology or a more compound path to the ontology.
+- The namespace for published resources in the ontology **shall** make use of the following namespace pattern: `https://posccaesar.org/ontology/<ontology_path>/<local_name_path>`
+- The `<local_name_path>` **may** contain the name of the sources or a more compooun path.
+- The IRI of each published resource **shall** be unique.
 
 ## R6. Term-level metadata
 
@@ -144,3 +157,4 @@ To be presented for visitors exploring PCA content in a browser, published resou
 
 - [PCA Host](index.md)
 - [Get Started with Hosting](get-started-with-hosting.md)
+
