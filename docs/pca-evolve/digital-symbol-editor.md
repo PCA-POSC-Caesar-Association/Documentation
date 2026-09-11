@@ -1,32 +1,20 @@
 ---
-title: Digital Symbol Editor
+title: Create and edit engineering symbols
+description: Import geometry-only SVG, add governed metadata and connection semantics, and save or update an engineering-symbol Draft.
 ---
 
-This guide explains the end-to-end use of the Digital Symbol Editor.
-
-## What this workflow is for
-
-Use the Digital Symbol Editor when you want to propose a new engineering symbol that can be reviewed, published, and reused in a richer digital context than a simple image file allows.
-
-## What makes this workflow special
-
-This workflow combines two things:
-
-- symbol geometry preparation
-- platform submission and review
-
-That means there are usually two parts to the work:
-
-1. prepare a compliant geometry-only SVG
-2. upload it together with the metadata and interaction information the platform needs
+Use the Engineering Symbol Editor when a symbol must be discoverable, retrievable as
+data, reviewed, and reusable in engineering applications—not merely stored as an image.
+The workflow turns geometry-only SVG into a governed resource with a stable IRI,
+metadata, a centre of rotation, and optional connection points.
 
 ## Recommended reading order
 
-1. Read [Digital Symbol Editor Figma Workflow](digital-symbol-editor-figma-workflow.md)
-2. Continue to [Digital Symbol Editor Submission Workflow](digital-symbol-editor-submission-workflow.md)
-3. Finish with [Digital Symbol Editor Best Practices](digital-symbol-editor-best-practices.md)
+1. [Prepare SVGs with Figma](digital-symbol-editor-figma-workflow.md)
+2. [Check geometry and quality](digital-symbol-editor-best-practices.md)
+3. [Submit an engineering symbol](digital-symbol-editor-submission-workflow.md)
 
-## End-to-end path
+## How the pieces fit together
 
 ```mermaid
 flowchart TD
@@ -34,13 +22,25 @@ flowchart TD
     Validate[Validate Geometry and Fill Rules]
     Upload[Upload SVG]
     Describe[Add Metadata and Interaction Data]
+    Draft[Save or Update Draft]
     Submit[Submit for Review]
 
-    Prepare --> Validate --> Upload --> Describe --> Submit
+    Prepare --> Validate --> Upload --> Describe --> Draft --> Submit
 ```
 
-## See also
+Prepare and validate the SVG first, then upload it and add the semantic information.
+Saving creates a Draft that you can inspect and edit; submitting starts the
+review process.
 
-- [Digital Symbol Editor Figma Workflow](digital-symbol-editor-figma-workflow.md)
-- [Digital Symbol Editor Submission Workflow](digital-symbol-editor-submission-workflow.md)
-- [Digital Symbol Editor Best Practices](digital-symbol-editor-best-practices.md)
+## API access
+
+The interactive editor requires Creator. API authoring uses `POST
+/esl/engineeringSymbols` and Draft updates use `PUT
+/esl/engineeringSymbols?iri=<encoded-Draft-IRI>`. A Reader or Creator can retrieve
+symbols from `GET /esl/engineeringSymbols` as Turtle, JSON-LD, or JSON.
+
+The [symbol submission guide](digital-symbol-editor-submission-workflow.md) explains the
+equivalent Creator API and the shared Draft lifecycle. Reader and Creator clients can
+retrieve symbols as Turtle, JSON-LD, or JSON after authenticating. A submitted symbol
+is locked against Creator changes and cannot be withdrawn to Draft through the
+documented workflow.

@@ -1,34 +1,22 @@
 ---
-title: Get Content Through the UI
+title: Use content in the browser
+description: Find, inspect, compare, and reference PCA content in the browser without writing code.
 ---
 
-This guide is for users who want to consume PCA content interactively through the platform.
+Use the browser when you need to understand a resource, compare alternatives, follow its
+relationships, or copy a stable identifier without writing code. Libraries, Search,
+and HTML content pages are available without a PCA role.
 
-## When to use this approach
+## Find and assess the content
 
-Use the UI-first path if you want to:
-
-- inspect the content yourself before using it elsewhere
-- compare several candidate items
-- navigate through related content and hierarchy
-- confirm labels, descriptions, and relationships without writing code
-
-## Step-by-step
-
-1. Use [PCA Explore](../pca-explore/index.md) to locate the content you need.
+1. Use [Find and understand data](../pca-explore/index.md) to locate the content you need.
 2. Open the content page for the relevant item.
 3. Confirm that the item is the correct concept, type, or resource.
-4. Copy the identifier or keep the page open for reference.
-5. If you need the content in another system, continue to the API guides in this section.
+4. Check status, source, mappings, and replacement links.
+5. Copy the resource identifier—not only the browser address—when recording a semantic reference.
+6. If you need the content in another system, continue to the API guides in this section.
 
-## Good practice
-
-- Use the UI to validate the meaning before you automate retrieval.
-- Check related content if you are working in a complex domain area.
-- Confirm whether you need one item, a whole collection, or a broader ontology context.
-
-## See also
-
-- [PCA Explore](../pca-explore/index.md)
-- [Get Content Through the API](get-content-through-the-api.md)
-- [Formats and Identifiers](formats-and-identifiers.md)
+Before copying the identifier, decide whether you need one item, a whole collection, or
+broader ontology context. When software needs the result, continue to
+[Find and retrieve data through the API](get-content-through-the-api.md) and
+[Identifiers and representations](formats-and-identifiers.md).

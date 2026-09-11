@@ -1,51 +1,30 @@
 ---
-title: CFIHOS Extensions
+title: CFIHOS+ extensions
+description: Choose and complete a Creator workflow for CFIHOS+ classes, properties, picklists, units, and dimensions.
 ---
 
-This guide explains how to use PCA to extend CFIHOS in a controlled way.
+Use CFIHOS+ when standard CFIHOS content does not cover a governed need and the new
+resource must remain connected to the CFIHOS structure. Start by identifying what is
+missing; each resource has different parent, value, and review rules.
 
-## What this workflow is for
+## Choose the resource to create
 
-Use this workflow when existing CFIHOS content does not fully cover your needs and you want to create extensions that remain technically aligned with the broader CFIHOS structure.
+| If you need to add... | Continue to | Important context |
+|---|---|---|
+| An equipment or tag classification | [Equipment and tag classes](cfihos-equipment-and-tag-classes.md) | Choose the right hierarchy and distinguish inherited from direct properties. |
+| A value carried by a class | [Properties](cfihos-properties.md) | Decide whether the value is numeric, controlled text, free text, or Boolean. |
+| A governed list of allowed values | [Picklists](cfihos-picklists.md) | The parent and its values are one review aggregate. |
+| A physical quantity model or measurement expression | [Units and dimensions](cfihos-units-and-dimensions.md) | Create or select the dimension before the unit and numeric property. |
 
-## Typical content types
+## How the workflow fits together
 
-Examples include:
+First [prepare the common authoring information](prepare-to-create-content.md), then use
+the selected guide for its specific fields and relationships. All of the guides cover
+the PCA form and the relevant Creator routes. Equipment and tag class authoring can also
+look up properties inherited from a chosen parent; that lookup supports the authoring
+form and is not a general consumer endpoint.
 
-- entities such as equipment or tags
-- properties
-- picklists and picklist values
-- dimensions
-- units of measure
-
-## Step-by-step for interactive users
-
-1. Start in [PCA Explore](../pca-explore/index.md) and confirm that the needed content does not already exist.
-2. Decide which CFIHOS extension type you need.
-3. Open the matching creator workflow in the platform.
-4. Fill in the required descriptive and structural information.
-5. Check carefully that the content really belongs in the intended CFIHOS context.
-6. Submit the proposal for review.
-
-## Step-by-step for technical users
-
-Relevant API endpoints include:
-
-- `POST /cfihos/entity`
-- `POST /cfihos/picklist`
-- `POST /cfihos/picklistvalue`
-- `POST /cfihos/unitofmeasure`
-- `POST /cfihos/dimension`
-- `GET /cfihos/ancestors/properties`
-
-A practical workflow is:
-
-1. Use the read endpoint to inspect inherited properties if needed.
-2. Prepare the new extension payload.
-3. Submit the proposed content with the appropriate creator permissions.
-4. Track the resulting item through review.
-
-## See also
-
-- [Choose an Evolve Workflow](choose-an-evolve-workflow.md)
-- [IMF Types](imf-types.md)
+After saving, inspect the generated Draft and use
+[Work with drafts and submit content](drafts-and-submission.md) when it is complete.
+[Definition sources and external mappings](definition-sources-and-mappings.md) explains
+the evidence and mapping choices shared by these resources.

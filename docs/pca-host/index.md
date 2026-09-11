@@ -1,22 +1,24 @@
 ---
-title: PCA Host
+title: Publish your content
+description: Decide when PCA Host is appropriate, prepare compliant RDF, and agree ownership, identifiers, updates, and lifecycle operations.
 ---
 
-`PCA Host` helps organizations publish digital content through PCA in a controlled and reusable way.
+**PCA Host** is for an organization that already owns or maintains a collection and
+wants PCA to make it resolvable, searchable, and reusable.
 
-Use this area when you need PCA to host and publish:
+This route is suitable for ontologies, reference data, RDF collections, and digital
+standards that already have an authoritative owner. It is contact-led onboarding, not a
+self-service Creator screen. Use [Create and extend content](../pca-evolve/index.md)
+instead when you need to author individual resources.
 
-- ontologies
-- reference data
-- related RDF content
-- standards or standard-related digital content
+## Start here
 
-## In this section
+| Stage | Guide | Outcome |
+|---|---|---|
+| Decide whether hosting is the right route | [Plan a hosted collection](get-started-with-hosting.md) | Agreed ownership, governance, namespace, rights, source, and operating model. |
+| Prepare the files | [Content host requirements](content-host-requirements.md) | RDF and metadata that PCA can validate and publish reliably. |
+| Plan releases and maintenance | [Operate hosted content](hosted-content-lifecycle.md) | Agreed updates, versions, identifiers, failure handling, and consumer communication. |
 
-- [Get Started with Hosting](get-started-with-hosting.md)
-- [Content Host Requirements](content-host-requirements.md)
-
-## Recommended reading order
-
-1. Start with [Get Started with Hosting](get-started-with-hosting.md) to understand whether PCA Host is the right path.
-2. Then read [Content Host Requirements](content-host-requirements.md) carefully before preparing any content package.
+Hosted content can be governed by PCA or by an external owner. If the external owner
+retains decision authority, PCA presents it as Externally Managed rather than forcing it
+through PCA's Draft/Submitted/Approved workflow.

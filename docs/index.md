@@ -1,32 +1,35 @@
 ---
-title: Platform & Services
+title: Platform and services
+description: Choose a PCA workflow by the outcome you need, from finding data to creating, reviewing, and publishing content.
 ---
 
-This documentation explains the PCA platform through the services it provides to users, members, and customers.
+This documentation is structured around the tasks and goals you are likely to have.
+Use the table below to map your goal quickly to the corresponding guidance.
 
-The platform is organized into six service areas:
+| Your goal | Start here | Typical access |
+|---|---|---|
+| Find an existing term, class, type, or symbol | [Find and understand data](pca-explore/index.md) (`PCA Explore`) | No PCA role |
+| Retrieve data for software or analysis | [Use data in applications](pca-consume/index.md) (`PCA Consume`) | Reader |
+| Create a library or extend content | [Create and extend content](pca-evolve/index.md) (`PCA Evolve`) | Creator |
+| Save work and send it to review | [Work with drafts and submit content](pca-evolve/drafts-and-submission.md) | Creator |
+| Assess a proposal and record an outcome | [Review and approve changes](pca-govern/index.md) (`PCA Govern`) | Reviewer |
+| Publish an existing collection through PCA | [Publish your content](pca-host/index.md) (`PCA Host`) | Collection owner and PCA onboarding |
+| Learn, request access, or get help | [Learn and get support](pca-empower/index.md) (`PCA Empower`) | Any user |
 
-- [PCA Explore](pca-explore/index.md)
-- [PCA Consume](pca-consume/index.md)
-- [PCA Evolve](pca-evolve/index.md)
-- [PCA Govern](pca-govern/index.md)
-- [PCA Host](pca-host/index.md)
-- [PCA Empower](pca-empower/index.md)
+## How the guides fit together
 
-Use this documentation when you want practical guidance on how to make use of those services, either interactively through the platform or programmatically through the API where that is supported.
+Start in the browser when you are learning the domain or checking what a resource means.
+Move to the API when you know which identifier, representation, or authoring workflow
+you need. Most documented flows and areas therefore provide both an interactive path
+through the PCA web application and a technical path through HTTP APIs.
 
-## How to use this documentation
+Before an authenticated API call or any authoring task, read
+[Roles, access, and content states](roles-access-and-content-states.md). A role controls
+what you may do, while a content status tells you where a resource is in its lifecycle.
+The [API endpoint and error reference](pca-consume/api-reference.md) then summarizes the
+supported Reader and Creator endpoint families.
 
-- Start with the service area that best matches what you are trying to achieve.
-- Read that area's `index.md` page first.
-- Continue into the user guides for either interactive usage or technical/API usage.
-- Use platform-specific governance pages only to understand how the service supports review, not to replace the broader governance documentation in the hub.
-
-## Which service should you start with?
-
-- Use [PCA Explore](pca-explore/index.md) if you want to search, browse, and understand what already exists.
-- Use [PCA Consume](pca-consume/index.md) if you want to retrieve or integrate PCA content.
-- Use [PCA Evolve](pca-evolve/index.md) if you want to create, propose, or extend content.
-- Use [PCA Govern](pca-govern/index.md) if you are a reviewer or want to understand how review is supported in the platform.
-- Use [PCA Host](pca-host/index.md) if you want PCA to host and publish digital content.
-- Use [PCA Empower](pca-empower/index.md) if you want help learning, adopting, and contributing effectively.
+These platform guides explain how to perform an action. **Libraries and Standards**
+explains the collections you are working with, and **Governance** explains ownership,
+review, and status. Check that context before treating a resource as suitable for
+operational use.

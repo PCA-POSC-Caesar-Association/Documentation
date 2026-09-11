@@ -1,20 +1,19 @@
 ---
-title: PCA Empower
+title: Learn and get support
+description: Follow role-based learning paths, request access, prepare an integration request, and provide useful support evidence safely.
 ---
 
-`PCA Empower` is the service area that helps users learn the platform, understand the content ecosystem, and adopt PCA workflows successfully.
+Learn and get support—also called **PCA Empower**—helps you move from your first visit
+to the access or onboarding needed for a specific task.
 
-Use this area when you want to:
+## Choose your next step
 
-- learn how the services fit together
-- understand where to start
-- improve your chances of using the platform effectively
-- point colleagues or community participants to the right guidance
+| If you need to... | Continue to |
+|---|---|
+| Learn the platform in an order suited to your role or task | [Learning paths](how-to-learn-the-platform.md) |
+| Request Reader or Creator, register an application, or report a problem | [Get access and support](get-access-and-support.md) |
+| Prepare an existing collection for publication through PCA | [Publish your content](../pca-host/index.md) |
 
-## In this section
-
-- [How to Learn the Platform](how-to-learn-the-platform.md)
-
-## Why this matters
-
-Documentation, guidance, and shared learning are part of the value of the platform. They help turn available technical capability into practical adoption.
+You can begin with Libraries, Search, and HTML content pages without a PCA role. Request
+access when your next task needs an API or authoring capability, and name that task so
+PCA can provision the appropriate access.

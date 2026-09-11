@@ -1,12 +1,17 @@
 ---
-title: Get Content Through the API
+title: Find and retrieve data through the API
+description: Choose between authorized search, dereferenceable resources, engineering-symbol data, and IMF SHACL.
 ---
-
-This guide explains how technical users can consume PCA content through the API.
 
 ## Before you start
 
-Read [API Authentication](api-authentication.md) first if your usage requires authenticated access.
+Choose the narrowest retrieval pattern that answers your question. Search finds an IRI;
+dereferencing returns a representation of that resource; specialized endpoints assemble
+content for a particular domain workflow.
+
+Read [Authentication and authorization](api-authentication.md) and obtain a Reader or
+Creator access token before using the API. Opening a human-readable HTML content page in
+the browser is a separate journey and does not require an API token.
 
 ## Main API consumption patterns
 
@@ -14,20 +19,23 @@ Read [API Authentication](api-authentication.md) first if your usage requires au
 
 Use the search endpoints when you first need to locate relevant resources.
 
-- Search index endpoint: `search/search-index`
-- UoM lookup endpoint: `search/uom`
+- Search index: `GET /search/search-index`
 
 Typical use:
 
 1. Query the search index to locate likely resources.
 2. Inspect the returned identifiers, labels, types, ontology information, and links.
-3. Follow the returned links or identifiers into the next retrieval step.
+3. In production, follow the returned links rather than constructing a host from the
+   identifier. In another environment, use an environment-specific returned `Link` or
+   target that environment when forming the request URL, as explained in
+   [Identifiers and representations](formats-and-identifiers.md).
 
 ### 2. Reference-data retrieval
 
 Use dereferenceable content endpoints when you already know the resource path and need machine-readable output.
 
-The platform supports HTML for human-readable pages and RDF representations for machine use. The RDF representations depend on the `Accept` header.
+Use a Reader or Creator access token and request the required JSON or RDF representation
+with `Accept`.
 
 Typical use:
 
@@ -35,40 +43,40 @@ Typical use:
 2. Request the resource with the representation you need.
 3. Use the returned RDF in your downstream workflow.
 
+For ontology resources, `detailLevel` controls how much context PCA returns:
+
+| Value | Meaning |
+|---|---|
+| `1` | Summary |
+| `2` | Relations; this is the default |
+| `3` | Complete ontology, including its members and related ontology context |
+
+For example, this request retrieves the complete IDO core ontology as Turtle. The
+legacy RDS URL redirects to the current PCA host, so `--location-trusted` is needed to
+forward the bearer token across this known PCA-owned redirect:
+
+```bash
+curl --location-trusted \
+  --header 'Authorization: Bearer <access-token>' \
+  --header 'Accept: text/turtle' \
+  'https://rds.posccaesar.org/ontology/lis14/ont/core?detailLevel=3'
+```
+
+Use `detailLevel=3` with an RDF representation. The current HTML and JSON handlers do
+not return the complete ontology view.
+
 ### 3. Specialized technical retrieval
 
 Some content families expose dedicated endpoints that are useful in specific workflows.
 
-Examples include:
+Supported examples include:
 
-- complete IMF SHACL for a block
-- complete IMF SHACL for a terminal
-- engineering symbols as RDF or JSON
-- inherited properties for CFIHOS equipment or tags
+- `GET /api/blocks/complete-imf-shacl?blockId=<lowercase-guid>`;
+- `GET /api/terminals/complete-imf-shacl?terminalId=<lowercase-guid>`;
+- `GET /esl/engineeringSymbols`.
 
-## Step-by-step API workflow
+**Note:** IMF IDs must use a lowercase GUID.
 
-1. Identify the content family you need.
-2. Decide whether you need discovery, direct retrieval, or a specialized endpoint.
-3. Authenticate if required.
-4. Call the endpoint with the correct parameters.
-5. Use the returned identifier, link, RDF, or JSON in your workflow.
-
-## Recommended endpoint families
-
-- `search/search-index` for discovery
-- `search/uom` for applicable units of measure
-- dereferenceable PCA content paths for reference-data retrieval
-- `api/blocks/complete-imf-shacl` and `api/terminals/complete-imf-shacl` for IMF SHACL output
-- `esl/engineeringSymbols` for engineering symbols
-- `cfihos/ancestors/properties` for CFIHOS property inheritance
-
-## Important note
-
-Use Swagger as the detailed endpoint reference after you understand the workflow. This documentation is meant to help you choose the right path and avoid starting at the wrong technical layer.
-
-## See also
-
-- [API Authentication](api-authentication.md)
-- [Formats and Identifiers](formats-and-identifiers.md)
-- [PCA Explore](../pca-explore/index.md)
+For the supported route families, see the
+[API endpoint and error reference](api-reference.md). Contact PCA before depending on
+anything undocumented.

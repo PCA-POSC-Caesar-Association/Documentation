@@ -1,47 +1,27 @@
 ---
-title: Choose an Evolve Workflow
+title: Choose a content workflow
+description: Select the correct PCA Creator workspace for reference data, CFIHOS+, IMF types, or engineering symbols.
 ---
 
-This guide helps you choose the right creation or proposal workflow.
+The table below gives a general mapping from common needs to corresponding resource
+types that can be created.
 
-## Use Create Reference Library when
+| Need | Workspace | Main resources |
+|---|---|---|
+| Establish a shared vocabulary or describe a reusable concept | [Reference data and taxonomies](create-reference-library.md) | Library/ontology, class, property |
+| Extend/build on the CFIHOS library | [CFIHOS+ extensions](cfihos-extensions.md) | Equipment class, tag class, property, picklist, unit, dimension |
+| Describe reusable information-model structures and their constraints | [IMF type authoring](imf-types.md) | Attribute type, terminal type, block type |
+| Publish a diagram symbol with reusable geometry and connection information | [Engineering symbols](digital-symbol-editor.md) | Symbol, geometry, centre of rotation, connection points |
 
-Choose [Create Reference Library](create-reference-library.md) if you need to:
+In practical terms, start with what is missing. A new business concept or vocabulary
+usually belongs in reference data. A missing CFIHOS class, property, allowed-value list,
+or measurement concept belongs in CFIHOS+. Reusable requirements belong in
+an IMF type, while visual diagram elements belong in the Engineering Symbol Editor.
 
-- create new ontology content or reference terms
-- add classes, properties, annotation properties, or SHACL shapes
-- work in a library or ontology context rather than a highly specialized product flow
+## After you choose
 
-## Use CFIHOS Extensions when
-
-Choose [CFIHOS Extensions](cfihos-extensions.md) if you need to:
-
-- extend CFIHOS for your project or organizational needs
-- add entities, properties, picklists, dimensions, or units of measure in a CFIHOS-aligned way
-
-## Use IMF Types when
-
-Choose [IMF Types](imf-types.md) if you need to:
-
-- create reusable IMF attributes, blocks, or terminals
-- build reusable digital twin or asset-information structures
-
-## Use Digital Symbol Editor when
-
-Choose [Digital Symbol Editor](digital-symbol-editor.md) if you need to:
-
-- propose new engineering symbols
-- upload geometry-based SVGs
-- provide metadata and interaction-related details such as connection points or center of rotation
-
-## General workflow
-
-1. Identify the type of content you need.
-2. Confirm whether PCA already has something you can reuse.
-3. Choose the specific evolve workflow.
-4. Prepare the mandatory information before you start filling in the form or calling the API.
-
-## See also
-
-- [PCA Explore](../pca-explore/index.md)
-- [PCA Govern](../pca-govern/index.md)
+We advise you to complete [Prepare to create content](prepare-to-create-content.md)
+before opening a form or building an API payload. The selected domain guide then
+explains the information and relationships unique to that resource. The shared steps
+for reopening, updating, and submitting the result are kept in
+[Work with drafts and submit content](drafts-and-submission.md).

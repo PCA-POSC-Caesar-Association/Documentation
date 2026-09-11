@@ -4,34 +4,54 @@ theme:
   name: material
 
 nav:
-  - index.md
-  - PCA Explore: 
-    - pca-explore/index.md
-    - Search and browse: pca-explore/search-and-browse.md
-    - Understand content pages: pca-explore/understand-content-pages.md
-  - PCA Consume: 
-    - pca-consume/index.md
-    - API authentication: pca-consume/api-authentication.md
-    - Formats and identifiers: pca-consume/formats-and-identifiers.md
-    - Accessing content the API: pca-consume/get-content-through-the-api.md
-    - Accessing content through the UI: pca-consume/get-content-through-the-ui.md
-  - PCA Evolve: 
-    - pca-evolve/index.md
-    - Choose an evolve workflow: pca-evolve/choose-an-evolve-workflow.md
-    - Create reference library: pca-evolve/create-reference-library.md
-    - CFIHOS extensions: pca-evolve/cfihos-extensions.md
-    - IMF types: pca-evolve/imf-types.md
-    - Digital symbol editor: pca-evolve/digital-symbol-editor.md
-    - Digital symbol editor Figma workflow: pca-evolve/digital-symbol-editor-figma-workflow.md
-    - Digital symbol editor submission workflow: pca-evolve/digital-symbol-editor-submission-workflow.md
-  - PCA Govern: 
-    - pca-govern/index.md
-    - Reviewer workflow: pca-govern/reviewer-workflow.md
-    - Dependency review and status updates: pca-govern/dependency-review-and-status-updates.md
-  - PCA Host: 
-    - pca-host/index.md
-    - Get started with hosting: pca-host/get-started-with-hosting.md
+  - Platform and services: index.md
+  - Roles, access, and content states: roles-access-and-content-states.md
+  - Find and understand data (PCA Explore):
+    - Find and understand data: pca-explore/index.md
+    - Search and filter: pca-explore/search-and-browse.md
+    - Read and assess content pages: pca-explore/understand-content-pages.md
+    - Use content in the browser: pca-consume/get-content-through-the-ui.md
+  - Use data in applications (PCA Consume):
+    - Use data in applications: pca-consume/index.md
+    - Identifiers and representations: pca-consume/formats-and-identifiers.md
+    - Authentication and authorization: pca-consume/api-authentication.md
+    - Find and retrieve data through the API: pca-consume/get-content-through-the-api.md
+    - API endpoint and error reference: pca-consume/api-reference.md
+  - Create and extend content (PCA Evolve):
+    - Create and extend content: pca-evolve/index.md
+    - Prepare to create content: pca-evolve/prepare-to-create-content.md
+    - Choose a content workflow: pca-evolve/choose-an-evolve-workflow.md
+    - Reference data and taxonomies:
+      - Create a reference-data library: pca-evolve/create-reference-library.md
+    - CFIHOS+ extensions:
+      - CFIHOS+ extensions: pca-evolve/cfihos-extensions.md
+      - Create CFIHOS+ equipment and tag classes: pca-evolve/cfihos-equipment-and-tag-classes.md
+      - Create CFIHOS+ properties: pca-evolve/cfihos-properties.md
+      - Create CFIHOS+ picklists: pca-evolve/cfihos-picklists.md
+      - Create CFIHOS+ units and dimensions: pca-evolve/cfihos-units-and-dimensions.md
+    - IMF type authoring:
+      - IMF type authoring: pca-evolve/imf-types.md
+      - Create IMF attribute types: pca-evolve/imf-attribute-types.md
+      - Create IMF terminal types: pca-evolve/imf-terminal-types.md
+      - Create IMF block types: pca-evolve/imf-block-types.md
+    - Engineering symbols:
+      - Create and edit engineering symbols: pca-evolve/digital-symbol-editor.md
+      - Prepare SVGs with Figma: pca-evolve/digital-symbol-editor-figma-workflow.md
+      - Geometry and quality practices: pca-evolve/digital-symbol-editor-best-practices.md
+      - Submit an engineering symbol: pca-evolve/digital-symbol-editor-submission-workflow.md
+    - Definition sources and external mappings: pca-evolve/definition-sources-and-mappings.md
+  - Submit content for review:
+    - Work with drafts and submit content: pca-evolve/drafts-and-submission.md
+  - Review and approve changes (PCA Govern):
+    - Review and approve changes: pca-govern/index.md
+    - Review a submission: pca-govern/reviewer-workflow.md
+    - Check dependencies and record an outcome: pca-govern/dependency-review-and-status-updates.md
+  - Publish your content (PCA Host):
+    - Publish your content: pca-host/index.md
+    - Plan a hosted collection: pca-host/get-started-with-hosting.md
     - Content host requirements: pca-host/content-host-requirements.md
-  - PCA Empower: 
-    - pca-empower/index.md
-    - How to learn the platform: pca-empower/how-to-learn-the-platform.md
+    - Operate hosted content: pca-host/hosted-content-lifecycle.md
+  - Learn and get support (PCA Empower):
+    - Learn and get support: pca-empower/index.md
+    - Learning paths: pca-empower/how-to-learn-the-platform.md
+    - Get access and support: pca-empower/get-access-and-support.md
