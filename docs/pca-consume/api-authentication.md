@@ -87,14 +87,15 @@ the allowed access.
 The principle is the same as for a user: obtain an OAuth access token and send it as a
 bearer token. The difference is that the application authenticates with its own
 credential and requests the API's `.default` permissions. A client-secret flow has this
-general shape:
+general shape. Here, `<protected-secret-file>` is populated by approved secret-management
+tooling and is kept outside source control:
 
 ```bash
 curl --request POST \
   --url 'https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token' \
   --header 'Content-Type: application/x-www-form-urlencoded' \
   --data-urlencode 'client_id=<application-client-id>' \
-  --data-urlencode 'client_secret=<application-client-secret>' \
+  --data-urlencode 'client_secret@<protected-secret-file>' \
   --data-urlencode 'scope=<PCA-API-application-ID-URI>/.default' \
   --data-urlencode 'grant_type=client_credentials'
 ```
