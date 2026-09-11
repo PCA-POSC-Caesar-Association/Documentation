@@ -1,28 +1,26 @@
 ---
-title: PCA Govern
+title: Review and approve changes
+description: Understand the Reviewer workspace, submitted-item queue, dependency checks, concurrent-change protection, and recorded outcomes.
 ---
 
-`PCA Govern` explains how the PCA platform supports the content review process.
+Review and approve changes—also called **PCA Govern**—is the role-protected workspace
+for assessing Submitted/Pending review content and recording an Approved or Rejected
+outcome.
 
-This is not the same as the governance process itself. The governance process is documented in the governance section of the hub. This section focuses on what reviewers and related users can do in the platform.
+These pages explain how the platform supports the decision; the Documentation Hub's
+**Governance** area defines who may decide and which organizational process must be
+followed.
 
-## In this section
+## Choose your task
 
-- [Reviewer Workflow](reviewer-workflow.md)
-- [Dependency Review and Status Updates](dependency-review-and-status-updates.md)
+| If you need to... | Continue to |
+|---|---|
+| Find a Pending review item and assess the proposal | [Review a submission](reviewer-workflow.md) |
+| Check affected dependencies, aggregates, or replacements and record the outcome | [Check dependencies and record an outcome](dependency-review-and-status-updates.md) |
+| Understand the full lifecycle, responsibilities, and decision rules | [Content review process](/governance/pca-content-review-process/) |
+| Interpret Draft, Submitted, Approved, Rejected, Deprecated, or Externally Managed | [Review statuses and outcomes](/governance/review-statuses-and-outcomes/) |
 
-## What the platform supports
-
-The platform supports governance by providing:
-
-- reviewer-only access to review views
-- an overview of submitted items waiting for review
-- dedicated review pages for specific items or packages
-- dependency checks before approval or rejection
-- controlled status updates once a decision has been made
-
-## When to use this section
-
-Use this section when you want to understand how review is facilitated in the platform itself.
-
-Use the hub governance pages when you want the review process as a governance process independent of the platform implementation.
+Review actions require the Reviewer role. Creators can use these pages to understand
+what happens after submission, but Reader or Creator access alone does not authorize a
+decision. Externally Managed resources follow their owner's lifecycle and do not enter
+this review queue.

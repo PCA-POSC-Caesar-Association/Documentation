@@ -1,31 +1,22 @@
 ---
-title: PCA Explore
+title: Find and understand data
+description: Search PCA content, assess results and statuses, and follow relationships before you reuse or extend a resource.
 ---
 
-`PCA Explore` helps you discover, inspect, and understand content that is available through PCA.
+Find and understand data—also called **PCA Explore**—helps you discover what PCA already
+contains and decide whether a resource fits your need. Libraries, Search, and HTML
+content pages are available without a PCA role.
 
-This service is the best starting point when you need to answer questions such as:
+## Choose what you need
 
-- What already exists in PCA?
-- Which library, ontology, or term should I use?
-- How do I navigate related concepts?
-- How do I inspect content before I consume, extend, or review it?
+| Your question | Continue to |
+|---|---|
+| Does this concept, type, or symbol already exist? | [Search and filter](search-and-browse.md) |
+| What does a result mean, and can I rely on it? | [Read and assess content pages](understand-content-pages.md) |
+| How can I compare and use content without code? | [Use content in the browser](../pca-consume/get-content-through-the-ui.md) |
+| How can my software retrieve the content? | [Use data in applications](../pca-consume/index.md) |
 
-## In this section
-
-- [Search and Browse](search-and-browse.md)
-- [Understand Content Pages](understand-content-pages.md)
-
-## Typical user journey
-
-1. Start from search or a known link.
-2. Open the relevant content page.
-3. Inspect labels, descriptions, status, and relationships.
-4. Use what you learn to decide whether to consume the content, propose changes, or bring it into review.
-
-## Who this is for
-
-- interactive users exploring content for the first time
-- domain experts checking whether content already exists
-- technical users who want a human-readable view before using the API
-- creators and reviewers who need context before taking action
+Search is a way to discover content. Remember to always make yourself familiar with the
+status of the content before usage in a production context.
+[Roles, access, and content states](../roles-access-and-content-states.md) explains how
+to interpret them.

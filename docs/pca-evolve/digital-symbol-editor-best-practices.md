@@ -1,29 +1,41 @@
 ---
-title: Digital Symbol Editor Best Practices
+title: Engineering-symbol geometry and quality practices
+description: Validate SVG path geometry, dimensions, fill behavior, metadata, center of rotation, and connection points before review.
 ---
 
-This guide summarizes practical advice for producing symbols that are easier to review and reuse.
+Use this checklist before saving and again before submitting.
 
 ## Best practices
 
-- let geometry carry the meaning of the symbol
-- avoid relying on color or stroke styling
-- keep the symbol as simple as possible without losing meaning
-- verify fill rules carefully before submission
-- make metadata clear enough for reviewers who do not share your local context
-- place connection points and rotation center deliberately
+- Let `<path d="...">` geometry carry the meaning; other SVG element types and styling
+  are not the stored geometry.
+- Use non-zero dimensions and make both width and height multiples of 12.
+- Avoid relying on color, stroke styling, masks, embedded text, or external assets.
+- Keep the symbol as simple as possible without losing meaning.
+- Verify nonzero fill rules and path direction carefully.
+- Make metadata clear enough for reviewers who do not share your local context.
+- Add exactly one deliberate center of rotation; it is required to save or submit.
+- Add connection points only where applications should connect an edge; verify X/Y and
+  direction for each point.
+- Choose the target symbol library before the first save; the existing-Draft editor keeps
+  that library fixed.
+- Use a precise `Replaces` IRI only for a real new version.
 
 ## Troubleshooting checklist
 
 If something does not behave as expected, check:
 
-- whether the SVG really uses path geometry
+- whether the file is valid SVG XML with an `<svg>` root
+- whether at least one path has non-empty `d`
+- whether `viewBox` or explicit dimensions can be read and both dimensions are multiples of 12
 - whether the paths are closed where needed
 - whether path direction produces the intended fill result
-- whether metadata and interaction data are complete
+- whether a center of rotation exists
+- whether name, description, target library, and justification are complete
+- whether the resource is still Draft; Submitted/Pending review symbols are locked
 
 ## See also
 
-- [Digital Symbol Editor](digital-symbol-editor.md)
-- [Digital Symbol Editor Figma Workflow](digital-symbol-editor-figma-workflow.md)
-- [Digital Symbol Editor Submission Workflow](digital-symbol-editor-submission-workflow.md)
+- [Create and edit engineering symbols](digital-symbol-editor.md)
+- [Prepare SVGs with Figma](digital-symbol-editor-figma-workflow.md)
+- [Submit an engineering symbol](digital-symbol-editor-submission-workflow.md)

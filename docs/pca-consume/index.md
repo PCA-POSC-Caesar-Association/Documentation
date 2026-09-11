@@ -1,24 +1,22 @@
 ---
-title: PCA Consume
+title: Use data in applications
+description: Retrieve and integrate PCA content through identifiers, negotiated RDF representations, search, and specialized APIs.
 ---
 
-`PCA Consume` helps you retrieve, reuse, and integrate PCA content.
+Use data in applications—also called **PCA Consume**—explains how a Reader or Creator
+can retrieve machine-readable PCA content and integrate it into another system.
 
-Use this service when you need to:
+## Choose your starting point
 
-- read content through the platform
-- retrieve content through APIs
-- work with different representations of the same content
-- integrate PCA content into your own systems or workflows
+| What you need | Guide |
+|---|---|
+| Understand an identifier or request JSON/RDF for a known resource | [Identifiers and representations](formats-and-identifiers.md) |
+| Obtain and use an access token | [Authentication and authorization](api-authentication.md) |
+| Choose between search, dereferencing, symbols, or IMF SHACL | [Find and retrieve data through the API](get-content-through-the-api.md) |
+| Check routes, formats, status codes, and request fields | [API endpoint and error reference](api-reference.md) |
 
-## In this section
-
-- [Get Content Through the UI](get-content-through-the-ui.md)
-- [Get Content Through the API](get-content-through-the-api.md)
-- [API Authentication](api-authentication.md)
-- [Formats and Identifiers](formats-and-identifiers.md)
-
-## Choose your path
-
-- If you mainly want to read and inspect content yourself, start with [Get Content Through the UI](get-content-through-the-ui.md).
-- If you want to integrate PCA content into software or automated workflows, start with [API Authentication](api-authentication.md) and then continue to [Get Content Through the API](get-content-through-the-api.md).
+Reader is the minimum required role for API search and retrieval. Creator includes
+those retrieval capabilities and adds the authoring abilities documented under
+[Create and extend content](../pca-evolve/index.md). If you are not yet sure which
+resource or identifier is correct, begin with
+[Find and understand data](../pca-explore/index.md) before automating the retrieval.

@@ -1,5 +1,6 @@
 ---
 title: PCA Host Content Requirements
+description: Normative file, RDF graph, ontology, namespace, metadata, dependency, typing, and instance-data requirements for PCA hosting.
 ---
 *Information requirements ensuring cost-efficient and quality publication of content*
 
@@ -7,7 +8,10 @@ title: PCA Host Content Requirements
 
 ## Introduction
 
-This document describes the publication policy for PCA ontologies and content hosted through PCA's platform. Given fulfillment of all requirements, PCA is able to give a price guarantee for publishing and hosting your ontology.
+This document describes the publication policy for PCA ontologies and content hosted
+through PCA's platform. Meeting the content requirements is necessary but does not by
+itself create a host: ownership, rights, lifecycle, source delivery, and operations must
+also be agreed during onboarding.
 
 ## Scope, assumptions, and terminology
 
@@ -124,9 +128,9 @@ Opaque or hash-based namespaces **shall not** be used.
 ### R5.2 General PCA compliant namespace
 
 - If an ontology is intended to be published at PCA, but not as a domain ontology under ISO 23726-3, then the following namespace pattern **shall** be used for the ontology: `https://posccaesar.org/ontology/<ontology_path>`
-- `<ontology_path>`**may** consist of just the name of the ontology or a more compound path to the ontology.
+- `<ontology_path>` **may** consist of just the name of the ontology or a more compound path to the ontology.
 - The namespace for published resources in the ontology **shall** make use of the following namespace pattern: `https://posccaesar.org/ontology/<ontology_path>/<local_name_path>`
-- The `<local_name_path>` **may** contain the name of the sources or a more compooun path.
+- The `<local_name_path>` **may** contain the name of the source or a more compound path.
 - The IRI of each published resource **shall** be unique.
 
 ## R6. Term-level metadata
@@ -153,8 +157,25 @@ To be presented for visitors exploring PCA content in a browser, published resou
 - Instance data is supported.
 - Instance data **shall** follow the same requirements as the other resources described here.
 
+## Operational onboarding information
+
+Before publication, the content owner and PCA should record:
+
+- authoritative owner and decision authority;
+- technical and incident contacts;
+- right and license to publish the content;
+- authoritative delivery source and supported file set;
+- version and release identifiers;
+- expected update cadence and correction process;
+- dependency availability;
+- whether resources are PCA-governed or Externally Managed; and
+- validation, rollback, and communication expectations for a failed update.
+
+These are onboarding inputs rather than additional RDF predicates. See
+[Operate hosted content](hosted-content-lifecycle.md).
+
 ## See also
 
-- [PCA Host](index.md)
-- [Get Started with Hosting](get-started-with-hosting.md)
-
+- [Publish your content](index.md)
+- [Plan a hosted collection](get-started-with-hosting.md)
+- [Identifiers and representations](../pca-consume/formats-and-identifiers.md)
